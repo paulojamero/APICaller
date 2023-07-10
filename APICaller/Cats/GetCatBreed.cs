@@ -3,17 +3,14 @@ using System.Collections.Generic;
 using System.Text;
 using System.Net.Http;
 using System.Threading.Tasks;
+using Newtonsoft.Json;
 
-namespace APICaller
+namespace APICaller.Cats
 {
     public class GetCatBreed
     {
         private readonly HttpClient _httpClient;
 
-        public GetCatBreed()
-        {
-             _httpClient = new HttpClient();
-        }
 
         public async Task BreedCaller(int numLimit)
         {
@@ -21,11 +18,21 @@ namespace APICaller
 
             try
             {
-                HttpResponseMessage response = await _httpClient.GetAsync(apiUrl);
-                response.EnsureSuccessStatusCode();
+                using(HttpClient _httpClient = new HttpClient())
+                {
+                
+                    HttpResponseMessage response = await _httpClient.GetAsync(apiUrl);
+                    if(response.IsSuccessStatusCode)
+                    {
+                        string jsonResponse = await response.Content.ReadAsStringAsync();
+                        //GetCatBreed getCatBreed = JsonConvert.DeserializeObject<GetCatBreed>(jsonResponse);
 
-                string responseBody = await response.Content.ReadAsStringAsync();
-                Console.Write(responseBody);
+                        Console.WriteLine(jsonResponse);
+
+                    }
+                    
+
+                }
             }
             catch (Exception ex)
             {

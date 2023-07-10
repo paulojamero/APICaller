@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "APICaller", "APICaller\APIC
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestConsole", "TestConsole\TestConsole.csproj", "{E4460129-FB05-4E3E-82DB-BB7812665B56}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gadgets", "Gadgets\Gadgets.csproj", "{6616B768-57E5-4C03-A29A-89FB347BE27C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{E4460129-FB05-4E3E-82DB-BB7812665B56}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E4460129-FB05-4E3E-82DB-BB7812665B56}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E4460129-FB05-4E3E-82DB-BB7812665B56}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6616B768-57E5-4C03-A29A-89FB347BE27C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6616B768-57E5-4C03-A29A-89FB347BE27C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6616B768-57E5-4C03-A29A-89FB347BE27C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6616B768-57E5-4C03-A29A-89FB347BE27C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
